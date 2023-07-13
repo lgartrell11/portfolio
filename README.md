@@ -13,3 +13,6 @@
 # market_finder:
 #   This python project reads a tsv file containing markets from all of the states in the United States.
 #   The python file asks the user for an zip code input, returning all the markets matching that zip code
+#
+# mastermind.c:
+#   This C project is an remake of the popular game mastermind.  
