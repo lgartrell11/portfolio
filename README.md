@@ -16,3 +16,7 @@
 #
 # mastermind.c:
 #   This C project is an remake of the popular game mastermind.  
+#
+# editbuffer.c:
+#   This C project is a buffer represetnation, with functions able to insert characters and move the cursor left and right along a tape.
+#   The output of the program can be related to a more complex version of a turning machine with added functions and capabilities. 
