@@ -24,3 +24,9 @@
 # loan.c:
 #   This C project is basic loan amortization calculator. 
 #   It takes the users input for period of repayment, loan amount, and APR and returns a result per month. 
+#
+# Final_Project.xlsx:
+#   This is an excel sheet that shows the 4 most popular programming languages from 2008-2016 
+#   Based off an imported datasheet on sheet1, I drew conclusions on the most popular langauges.
+#   The point of this project was to showcase my graphing and coding skills in excel. 
+#   Sheet2 and sheet3 shows the statistics I deduced form the data. 
