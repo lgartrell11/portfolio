@@ -7,7 +7,7 @@
 #   Because the log in information is private, it has been replaced with "*" for the purpose of this upload
 
 #   The bot also includes features to:
-#   - Email potential donors via outlook an inputed message
+#   - Email potential donors an user inputed message via outlook 
 #   - Add the potential donor information to a excel sheet
 #   - Add the potential donor information to a google sheet
 #
