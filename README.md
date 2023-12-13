@@ -66,4 +66,6 @@
 # delete.php:
 #   This php file serves the same functionality as the delete.js file, though this file is utilized for a webpage frontend/backend and not an app
 #
+# index.js:
+#   This javscript file serves as the index page for the webpage
 #
