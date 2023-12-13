@@ -31,3 +31,23 @@
 #   Based off an imported datasheet on sheet1, I drew conclusions on the most popular langauges.
 #   The point of this project was to showcase my graphing and coding skills in excel. 
 #   Sheet2 and sheet3 shows the statistics I deduced form the data. 
+#
+# addSong.js:
+#   This javascript file is a component to a parent App.js. The component allowed a user to add a song to a SQL database 
+#
+# delete.js: 
+#   This javascript file is a component to a parent App.js: The component allowed a user to delete a song that which they added from a SQL database 
+#
+# edit.js: 
+#   This javascript file is a component to a parent App.js: The component allowed a user to edit a song rating that they added 
+#
+# searchSong.js:
+#   This javascript file is a component to a parent App.js: The component allowed a user to search through the song database for specfic songs,     #   returning the results of the search 
+#
+# App.test.js:
+#   This javascript file is used to test the functionality of the App.js. It utilizes jest to do so. 
+#
+# App.js:
+#   This Javascript file, worked on by both my partner and I, was the main page of our app/webpage. It contains all the child components and 
+#   functionality needed for a properly working frontend. 
+
