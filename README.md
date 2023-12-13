@@ -32,6 +32,8 @@
 #   The point of this project was to showcase my graphing and coding skills in excel. 
 #   Sheet2 and sheet3 shows the statistics I deduced form the data. 
 #
+# SOFTWARE ENGINEERING EXPERIENCE (only includes work done by myself, with the only exception being App.js):
+#
 # addSong.js:
 #   This javascript file is a component to a parent App.js. The component allowed a user to add a song to a SQL database 
 #
@@ -48,6 +50,22 @@
 #   This javascript file is used to test the functionality of the App.js. It utilizes jest to do so. 
 #
 # App.js:
-#   This Javascript file, worked on by both my partner and I, was the main page of our app/webpage. It contains all the child components and 
+#   This Javascript file, worked on by both my partner and I, was the main page of our app. It contains all the child components and 
 #   functionality needed for a properly working frontend. 
-
+#
+# addSong.php: 
+#   Similar to addSong.js, this php file allowed the user the add songs to a database
+#
+# Registration.php:
+#   This php file served as the registration page for my partner and I's webpage. 
+#   
+# update.php:
+#   This php file serves the same functionality as the edit.js file, though this file is utilzied for a webpage and not an app
+#
+# Screenshot 2023-10-18:
+#   Screenshot of the SQL database we used for my partner and I's app and website. 
+#
+# delete.php:
+#   This php file serves the same functionality as the delete.js file, though this file is utilzied for a webpage and not an app
+#
+#
