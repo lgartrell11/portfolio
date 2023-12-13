@@ -32,40 +32,38 @@
 #   The point of this project was to showcase my graphing and coding skills in excel. 
 #   Sheet2 and sheet3 shows the statistics I deduced form the data. 
 #
-# SOFTWARE ENGINEERING EXPERIENCE (only includes work done by myself, with the only exception being App.js):
-#
 # addSong.js:
-#   This javascript file is a component to a parent App.js. The component allowed a user to add a song to a SQL database 
+#   This javascript file is a component to a parent App.js. The component allows a user to add a song to a SQL database 
 #
 # delete.js: 
-#   This javascript file is a component to a parent App.js: The component allowed a user to delete a song that which they added from a SQL database 
+#   This javascript file is a component to a parent App.js: The component allows a user to delete a song that which they added from a SQL database 
 #
 # edit.js: 
-#   This javascript file is a component to a parent App.js: The component allowed a user to edit a song rating that they added 
+#   This javascript file is a component to a parent App.js: The component allows a user to edit a song rating that they added 
 #
 # searchSong.js:
-#   This javascript file is a component to a parent App.js: The component allowed a user to search through the song database for specfic songs,     #   returning the results of the search 
+#   This javascript file is a component to a parent App.js: The component allows a user to search through the song database for specfic songs,     #   returning the results of the search 
 #
 # App.test.js:
-#   This javascript file is used to test the functionality of the App.js. It utilizes jest to do so. 
+#   This javascript file is used to test the functionality of the App.js (i.e successful POST request and UI display). It utilizes Jest to do so. 
 #
 # App.js:
 #   This Javascript file, worked on by both my partner and I, was the main page of our app. It contains all the child components and 
 #   functionality needed for a properly working frontend. 
 #
 # addSong.php: 
-#   Similar to addSong.js, this php file allowed the user the add songs to a database
+#   Similar to addSong.js, this php file allowes the user the add songs to a database
 #
 # Registration.php:
-#   This php file served as the registration page for my partner and I's webpage. 
+#   This php file serves as the registration page for the webpage. 
 #   
 # update.php:
-#   This php file serves the same functionality as the edit.js file, though this file is utilzied for a webpage and not an app
+#   This php file serves the same functionality as the edit.js file, though this file is utilzied for a webpage frontend/backend and not an app
 #
 # Screenshot 2023-10-18:
-#   Screenshot of the SQL database we used for my partner and I's app and website. 
+#   Screenshot of the SQL database used for both the app and website. 
 #
 # delete.php:
-#   This php file serves the same functionality as the delete.js file, though this file is utilzied for a webpage and not an app
+#   This php file serves the same functionality as the delete.js file, though this file is utilized for a webpage frontend/backend and not an app
 #
 #
