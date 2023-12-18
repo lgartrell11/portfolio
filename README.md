@@ -1,11 +1,11 @@
-# This portfolio contains a collection of projects showcasing a wide branch of computer skills 
+# This portfolio contains a collection of projects/assignemnts showcasing a wide branch of computer science skills 
 #
 # OKR:
 #   The OKR files are related to my work experince as a technology manager for Our Kids Read. 
 #   The bot searches through a Princeton database, retreives the information for the desired search,
 #   and adds their information to a csv file (which is added to the OKR database via SQL).
 #   Because the log in information is private, it has been replaced with "*" for the purpose of this upload
-
+#
 #   The bot also includes features to:
 #   - Email potential donors an user inputed message via outlook 
 #   - Add the potential donor information to a excel sheet
@@ -51,6 +51,9 @@
 #   This Javascript file, worked on by both my partner and I, was the main page of our app. It contains all the child components and 
 #   functionality needed for a properly working frontend. 
 #
+# index.js:
+#   This javscript file serves as the index page for the webpage
+#
 # addSong.php: 
 #   Similar to addSong.js, this php file allowes the user the add songs to a database
 #
@@ -66,6 +69,9 @@
 # delete.php:
 #   This php file serves the same functionality as the delete.js file, though this file is utilized for a webpage frontend/backend and not an app
 #
-# index.js:
-#   This javscript file serves as the index page for the webpage
+# hw7.sml:
+#   This SML file contains a cost efficient AVL tree implemntation with related functionals.
+#
+# hw9.sml: 
+#   This SML file showcases the use of "List" functionals. 
 #
