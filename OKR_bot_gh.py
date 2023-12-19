@@ -256,7 +256,7 @@ while(x < 2):
         server = smtplib.SMTP('smtp-mail.outlook.com',587)
         server.ehlo()
         server.starttls()
-        server.login('lance.gartrell@ourkidsreadinc.org', 'OurKidsRead123!')
+        server.login('lance.gartrell@ourkidsreadinc.org', '****')
         email = EmailMessage()
         email['From'] = 'lance.gartrell@ourkidsreadinc.org'
         email['To'] = receiver
