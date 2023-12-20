@@ -4,7 +4,8 @@
 #   The OKR files are related to my work experince as a technology manager for Our Kids Read. 
 #   The bot searches through a Princeton database, retreives the information for the desired search,
 #   and adds their information to a csv file (which is added to the OKR database via SQL).
-#   Because the log in information is private, it has been replaced with "*" for the purpose of this upload
+#   For security reasons, the log in information has been replaced with "*" and the bot has been modified for example purposes.
+#   
 #
 #   The bot also includes features to:
 #   - Email potential donors an user inputed message via outlook 
