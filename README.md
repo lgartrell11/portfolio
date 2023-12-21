@@ -11,6 +11,7 @@
 #   - Email potential donors an user inputed message via outlook 
 #   - Add the potential donor information to a excel sheet
 #   - Add the potential donor information to a google sheet
+#   - Store donor data in a csv or excel file
 #
 # market_finder.py:
 #   This python project reads a tsv file containing markets from all of the states in the United States.
