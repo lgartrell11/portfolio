@@ -99,10 +99,10 @@ with requests.Session() as session:
     login_info = {'username': '', 'password': ''}
     session.post(url, data=login_info)
 
-    # Advanced search
-    search_url = "URL_FOR_ADVANCED_SEARCH"
-    response = session.get(search_url)
-    soup = BeautifulSoup(response.content, "html.parser")
+# Advanced search
+adv_searched = driver.find_element(By.CSS_SELECTOR, "#imod-view-content > div.imod-search-form.imod-field-label-align-left > div.imod-button-section > a")
+adv_searched.click()
+time.sleep(2)
     
 # Perform search...selects and inputs the user inputed values
 if search_year:
