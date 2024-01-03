@@ -44,13 +44,10 @@ import gspread_dataframe as gd
 import csv
 from selenium.common.exceptions import NoSuchElementException
 
-def find_loc(headers):
-    loc = 0
+def find_career_information(headers):
     for header in headers: 
-        loc += 1
-        h = header.get_attribute('innerHTML')
+        h = header.text.strip()
         if h == "Career Information":
-            header.click()
             return True
     return False
 
@@ -91,40 +88,23 @@ if search_country:
 else: 
     search_country == "null"
 
+# Create a session
+with requests.Session() as session:
+    # Opens tigernet
+    url = "https://tigernet.princeton.edu/s/1760/02-tigernet/20/interior.aspx?sid=1760&gid=2&pgid=6#/Search/Advanced"
+    response = session.get(url)
+    soup = BeautifulSoup(response.content, "html.parser")
 
+    # Login
+    login_info = {'username': '', 'password': ''}
+    session.post(url, data=login_info)
 
-# Allows for the bot to login and move through the html of websites
-options = webdriver.ChromeOptions()
-options.add_experimental_option('excludeSwitches', ['enable-logging'])
-driver = webdriver.Chrome(options=options)
-
-#  opens tigernet
-driver.get("https://tigernet.princeton.edu/s/1760/02-tigernet/20/interior.aspx?sid=1760&gid=2&pgid=6#/Search/Advanced")
-
-# Maximize the window and let code stall
-# for 10s to properly maximise the window.
-driver.maximize_window()
-time.sleep(5)
-
-# Obtain button by link text and click.
-firstLoginButton = driver.find_element(By.ID, "cid_40_btnSsoLogin")
-firstLoginButton.click()
-time.sleep(3)
-
-
-# Second log in screen, types in info and logs in
-username = driver.find_element(By.ID, "username").send_keys("*****")
-time.sleep(2)
-password = driver.find_element(By.ID, "password").send_keys("*********")
-time.sleep(2)
-second_search_button = driver.find_element(By.CLASS_NAME, "mdc-button__label")
-second_search_button.click()
-time.sleep(7)
-
-adv_searched = driver.find_element(By.CSS_SELECTOR, "#imod-view-content > div.imod-search-form.imod-field-label-align-left > div.imod-button-section > a")
-adv_searched.click()
-time.sleep(2)
-# Search page...selects and inputs the tageted values
+    # Advanced search
+    search_url = "URL_FOR_ADVANCED_SEARCH"
+    response = session.get(search_url)
+    soup = BeautifulSoup(response.content, "html.parser")
+    
+# Perform search...selects and inputs the user inputed values
 if search_year:
     year = driver.find_element(By.ID, 'mf_882')
     year_to_be_searched_for = Select(year)
@@ -155,23 +135,13 @@ search = driver.find_element(By.CSS_SELECTOR, "#imod-view-content > section > di
 driver.execute_script("arguments[0].scrollIntoView();", search)
 search.click()
 
-# Profile Page...find alls the profile elements 
-profilePage = driver.current_window_handle
-waitfprofile = WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.CLASS_NAME, "expand")))
-l = [] 
-profile_list = driver.find_elements(By.CLASS_NAME, "imod-directory-member-name")
-num_of_alum = driver.find_element(By.XPATH, "//*[@id='imod-view-content']/div[2]/p/strong").get_attribute('innerhtml')
-currenturl = driver.current_url
+# Scraping profile information
+np = 3
 
-
-#loop for clicking on each profile
-profile_location = 7
-# range(0, len(profile_list)
-x = 0
-if (int(num_of_alum) < 20):
-    x = x + 1        
-while(x < 2):
+while x < 2:
+    profile_list = soup.find_all("div", class_="imod-directory-member-name")
     for profile in profile_list:
+        # Code to scrape profile information (name, email, career details, etc.)
         strLocation = str(profile_location) 
         xpath = '//*[@id="imod-view-content"]/div[' + strLocation + ']/div/div/div[1]'
         profile_location = profile_location + 1
@@ -227,29 +197,24 @@ while(x < 2):
         else:
             employer = "N/A"
             job_title = "N/A"
-
-        print(email)
-        print(employer)
-        print(job_title)
+            
         data = []
-        data = name, email,job_title, employer, search_year, search_state, search_city, 
-
-        # "w+" means the file witll be truncate, which basically means it clears the file before writing to it
-        with open('tigernet_db_test.csv', 'a', newline='') as file:
+        
+        # Writing data to CSV file
+        data = [name, email, job_title, employer, search_year, search_state, search_city]
+        with open('tigernet_data.csv', 'a', newline='', encoding='utf-8') as file:
             writer = csv.writer(file)
-            writer.writerow(data)        
+            writer.writerow(data)
 
-        driver.execute_script("window.history.go(-1)")
-        time.sleep(7)
-    np = 3
-    if (x == 0):
-        next_page = driver.find_element(By.XPATH, "//*[@id='imod-view-content']/div[27]/div/div[1]/div[" + np + "]/div/a")
+            # Code for navigating to the next page
+    if x == 0:
+        next_page = driver.find_element(By.XPATH, "//*[@id='imod-view-content']/div[27]/div/div[1]/div[" + str(np) + "]/div/a")
         next_page.click()
-        np = np + 1
-    x = x + 1
+        np += 1
 
+    x += 1  # Increment x for controlling the loop iterations
 
-
+    
 
 # construct Outlook application instance and send intended email
     def send_email(receiver, subject, message):
