@@ -135,18 +135,19 @@ search = driver.find_element(By.CSS_SELECTOR, "#imod-view-content > section > di
 driver.execute_script("arguments[0].scrollIntoView();", search)
 search.click()
 
-# Scraping profile information
+# Scraping profile information (two pages max for the daily limit of 50
 np = 3
 
 while x < 2:
     profile_list = soup.find_all("div", class_="imod-directory-member-name")
     for profile in profile_list:
+        
         # Code to scrape profile information (name, email, career details, etc.)
         strLocation = str(profile_location) 
         xpath = '//*[@id="imod-view-content"]/div[' + strLocation + ']/div/div/div[1]'
         profile_location = profile_location + 1
         profile = driver.find_element(By.XPATH, xpath)
-        #profile.find_element(By.CLASS_NAME, "expand")
+        
         profile.click()
         time.sleep(7)
         
@@ -159,8 +160,6 @@ while x < 2:
         driver.execute_script("arguments[0].scrollIntoView();", home_info)
         driver.execute_script("arguments[0].click();", home_info)
         email = driver.find_element(By.XPATH, "//*[@id='imod-view-content']/div/div/div[2]/div[2]/div[2]/div[2]/ul/li[1]/div[2]").get_attribute('innerHTML')
-        #career_exist = exist("#imod-view-content > div > div > div:nth-child(4) > div.imod-profile-step-header > div > div.imod-profile-header-text.ng-binding.ng-scope")    
-        #print(career_exist)
 
         headers = driver.find_elements(By.CLASS_NAME, "imod-profile-step-header")
         print(headers)
