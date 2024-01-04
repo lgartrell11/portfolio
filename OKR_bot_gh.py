@@ -1,7 +1,7 @@
 
 # Lance Gartrell
-# Bot designed to populate an excel sheet with clients--work exclusively with tigernet database
-# + emailing feature
+# Bot designed to populate an csv file, excel or google sheet with potential donor information--work exclusively with tigernet database
+#    - includes emailing feature
 #
 #
 # imports needed to install via terminal/console
