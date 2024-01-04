@@ -1,6 +1,6 @@
 
 # Lance Gartrell
-# Bot designed to populate an csv file, excel or google sheet with potential donor information--work exclusively with tigernet database
+# Bot designed to populate an csv file, excel file, or google sheet with potential donor information--work exclusively with tigernet database
 #    - includes emailing feature
 #
 #
